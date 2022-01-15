@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/menu-canvas.css">
+    <link rel="stylesheet" href="style/recent.css">
+    <link rel="stylesheet" href="style/recommend.css">
+</head>
+
+<body>
+    <header id="header">
+        <!--Button to open menu canvas-->
+        <button id="menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop"
+            aria-controls="offcanvasWithBackdrop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16" style="top:0px">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+
+        <!--logo-->
+        <span id="logo">
+            Company
+        </span>
+
+        <!--Search button, for mobile-->
+        <button id="search" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </button>
+
+        <!--Searchbox, for pc-->
+        <button id="searchbox" type="button">
+            <span>Bạn đang cần tìm kiếm?</span>
+            <span style="float: right;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </span>
+        </button>
+    </header>
+
+
+
+    <!--Menu offcanvas-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+        aria-labelledby="offcanvasWithBackdropLabel">
+        <div class="offcanvas-header">
+            <div id="menu-header">Company</div>
+        </div>
+        <div class="list-group list-group-flush" id="menu1">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                </svg>
+                Trang chủ
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-collection-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
+                </svg>
+                Thư viện
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                Mục yêu thích
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clock-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                </svg>
+                Lịch sử
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                </svg>
+                Cài đặt
+            </a>
+        </div>
+        <div class="list-group" id="menu2">
+            <a href="#" class="list-group-item list-group-item-action">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+                Phản hồi
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-grid-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                </svg>
+                Ứng dụng khác
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                </svg>
+                Về chúng tôi
+            </a>
+        </div>
+    </div>
+
+    <!--Main zone-->
+    <div id="main">
+        <!--Recommended-->
+        <p id="title">Được đề xuất</p>
+        <div id="rcm">
+            <div id="rcm1">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="data/rcm1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="data/rcm2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="data/rcm3.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!--
+            <div id="rcm2">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="data/rcm1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="data/rcm2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="data/rcm3.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        -->
+        </div>
+
+
+        <!--Recent files zone-->
+        <div id="recent">
+            <p id="title">Các tệp gần đây</p>
+            <div id="recent-tiles">
+                <div class="card recent">
+                    <img src="data/pic1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ảnh 1</h5>
+                        <p class="card-text">MOS, ngày 16/9/2021</p>
+                    </div>
+                    <ul class="list-group list-group-flush recent">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                            </svg>
+                            Xem
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                            Yêu thích
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                            </svg>
+                            Xóa
+                        </a>
+                    </ul>
+                </div>
+                <div class="card recent">
+                    <img src="data/pic2.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ảnh 2</h5>
+                        <p class="card-text">Writing</p>
+                    </div>
+                    <ul class="list-group list-group-flush recent">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                            </svg>
+                            Xem
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                            Yêu thích
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                            </svg>
+                            Xóa
+                        </a>
+                    </ul>
+                </div>
+                <div class="card recent">
+                    <img src="data/pic3.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ảnh 3</h5>
+                        <p class="card-text">Toán (lượng giác)</p>
+                    </div>
+                    <ul class="list-group list-group-flush recent">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                            </svg>
+                            Xem
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                            Yêu thích
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                            </svg>
+                            Xóa
+                        </a>
+                    </ul>
+                </div>
+                <div class="card recent">
+                    <img src="data/pic4.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ảnh 4</h5>
+                        <p class="card-text">Vocab</p>
+                    </div>
+                    <ul class="list-group list-group-flush recent">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                            </svg>
+                            Xem
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                            Yêu thích
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                            </svg>
+                            Xóa
+                        </a>
+                    </ul>
+                </div>
+                <div class="card recent">
+                    <img src="data/pic5.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ảnh 5</h5>
+                        <p class="card-text">Vật lí</p>
+                    </div>
+                    <ul class="list-group list-group-flush recent">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                            </svg>
+                            Xem
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                            Yêu thích
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                            </svg>
+                            Xóa
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Projects-->
+        <div id="main-content">
+            <p id="title">Các dự án đang chạy</p>
+            <!--
+                <input type="text" list="list">
+                <datalist id="list">
+                    <option value="hehe">
+                </datalist>
+            -->
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
